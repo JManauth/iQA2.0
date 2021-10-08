@@ -36,8 +36,9 @@ const evaluationSchema = new Schema(
         },
 
         empathyAndPassion: {
-            type: Boolean,
+            type: String,
             required: true,
+            trim: true,
         },
         empathyAndPassionFeedback: {
             type: String,
@@ -45,8 +46,9 @@ const evaluationSchema = new Schema(
             trim: true,
         },
         commitment: {
-            type: Boolean,
+            type: String,
             required: true,
+            trim: true,
         },
         commitmentFeedback: {
             type: String,
@@ -54,8 +56,9 @@ const evaluationSchema = new Schema(
             trim: true,
         },
         anticipation: {
-            type: Boolean,
+            type: String,
             required: true,
+            trim: true,
         },
         anticipationFeedback: {
             type: String,
@@ -63,8 +66,9 @@ const evaluationSchema = new Schema(
             trim: true,
         },
         clarity: {
-            type: Boolean,
+            type: String,
             required: true,
+            trim: true,
         },
         clarityFeedback: {
             type: String,
@@ -72,8 +76,9 @@ const evaluationSchema = new Schema(
             trim: true,
         },
         everyCustomerMatters: {
-            type: Boolean,
+            type: String,
             required: true,
+            trim: true,
         },
         everyCustomerMattersFeedback: {
             type: String,
@@ -81,10 +86,9 @@ const evaluationSchema = new Schema(
             trim: true,
         },
         finalScore: {
-            type: Number,
+            type: String,
             required: true,
-            min: 0,
-            max: 5,
+            trim: true,
         }
 
     },
