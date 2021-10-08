@@ -33,12 +33,9 @@ const userSchema = new Schema(
             required: true,
         },
 
-        teamLead: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'User',
-            },
-        ],
+        teamLead: {
+            type: String
+        },
     },
     {
         toJSON: {

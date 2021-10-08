@@ -11,29 +11,23 @@ const evaluationSchema = new Schema(
             trim: true,
         },
 
-        agentName: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'User',
-                required: true,
-            }
-        ],
+        agentName: {
+            type: String,
+            required: true,
+            trim: true
+        },
 
-        author: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'User',
-                required: true,
-            }
-        ],
+        author: {
+            type: String,
+            required: true,
+            trim: true
+        },
 
-        teamleadName: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'User',
-                required: true,
-            }
-        ],
+        teamleadName: {
+            type: String,
+            required: true,
+            trim: true
+        },
 
         createdAt: {
             type: Date,
