@@ -1,0 +1,39 @@
+[
+    {
+        "username": "bigchungus",
+        "firstName": "Tom",
+        "lastName": "Myspace",
+        "userType": "teamlead",
+        "email": "myspace@hotmail.com",
+        "password": "Password1234",
+        "teamLead": null
+    },
+    {
+        "username": "biggerChungus",
+        "firstName": "Jafet",
+        "lastName": "Manauth",
+        "userType": "Qa",
+        "email": "bigchungus@yahoo.com",
+        "password": "Password512",
+        "teamLead": null
+    },
+    {
+        "username": "smallChungus",
+        "firstName": "Zion",
+        "lastName": "Flores",
+        "userType": "Agent",
+        "email": "ziontheG@hotmail.com",
+        "password": "Password956",
+        "teamLead": "bigchungus"
+    },
+    {
+        "username": "mediumchungus",
+        "firstName": "billy",
+        "lastName": "doorman",
+        "userType": "Agent",
+        "email": "mediumchungus@yahoo.com",
+        "password": "Passowrd210",
+        "teamLead": "bigchungus"
+    }
+
+]
