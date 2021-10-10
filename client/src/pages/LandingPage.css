@@ -1,0 +1,50 @@
+body{
+    margin:50px,
+}
+
+.topLeft{
+    width: 50%;
+    height: 50vh;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    background-color: skyblue;
+    z-index: auto;
+    margin-left: 0%;
+    
+}
+.topRight{
+    width: 50%;
+    height: 50vh;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    background-color: skyblue;
+    z-index: auto;
+    margin-right: 0%;
+    padding-right: 0%;
+}
+.bottomLeft{
+    width: 50%;
+    height: 50vh;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    background-color: skyblue;
+    z-index: auto;
+}
+.bottomRight{
+    width: 50%;
+    height: 50vh;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    background-color: skyblue;
+    z-index: auto;
+}
+.centerPiece{
+    border: 4px solid white;
+    width: 40%;
+    height: 40vh;
+    background-color: skyblue;
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    z-index: 1;
+}

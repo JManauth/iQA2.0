@@ -2,6 +2,8 @@ const router = require('express').Router();
 const {
   createUser,
   createEval,
+  login,
+  allUsers,
 } = require('../../controllers/user-controller');
 
 // import middleware
@@ -12,10 +14,8 @@ router.route('/').post(createUser)
 
 router.route('/eval').post(createEval)
 
-// router.route('/login').post(login);
+router.route('/login').post(login);
 
-// router.route('/me').get(authMiddleware, getSingleUser);
-
-// router.route('/books/:bookId').delete(authMiddleware, deleteBook);
+// router.route('/allusers').get(allUsers)
 
 module.exports = router;
