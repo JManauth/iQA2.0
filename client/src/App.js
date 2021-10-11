@@ -5,6 +5,7 @@ import SignUp from './pages/SignUp';
 import AddEval from './pages/AddEval';
 import Login from './pages/Login';
 import LandingPage from './pages/LandingPage';
+import SignInForm from './components/LandingPageComponents/SignInForm'
 
 
 function App() {
@@ -15,8 +16,10 @@ function App() {
       <Route exact path='/'>
           <LandingPage/>
           </Route>
-        <Route exact path='/login'>
-          <Login/>
+        <Route exact path='/signin'>
+          <LandingPage>
+            
+          </LandingPage>
           </Route>
         <Route exact path='/add-eval' >
           <AddEval />
