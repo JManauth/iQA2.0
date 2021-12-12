@@ -35,8 +35,8 @@ module.exports = {
         if (!correctPw) {
             return res.status(400).json({ message: 'Wrong password!' });
         }
-        const token = signToken(user);
-        res.json({ token, user });
+        // const token = signToken(user);
+        // res.json({ token, user });
     },
 
     async findAllUsers({ body }, res){

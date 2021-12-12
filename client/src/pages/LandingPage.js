@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './LandingPage.css';
 
@@ -8,7 +8,7 @@ import LandingPageForm from '../components/LandingPageComponents/LandingPageForm
 
 
 
-import { Container, Row, Col } from 'react-bootstrap';
+
 
 const LandingPage = () => {
     return (

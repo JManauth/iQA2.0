@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import SignUp from './pages/SignUp';
 import AddEval from './pages/AddEval';
-import Login from './pages/Login';
+
 import LandingPage from './pages/LandingPage';
-import SignInForm from './components/LandingPageComponents/SignInForm'
+
 
 
 function App() {

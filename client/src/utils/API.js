@@ -18,7 +18,7 @@ export const createEval = (evalData) => {
     });
 };
 
-export const loginUser = (userData) => {
+export const signIn = (userData) => {
     return fetch('api/users/login', {
         method: 'POST',
         headers: {
