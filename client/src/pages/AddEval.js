@@ -59,17 +59,17 @@ const AddEval = () => {
 
     return (
         <main className="flex-row justify-center mb-4">
-            <div className="col-12 col-lg-10">
+            <div className="col-4">
                 <div className="card">
                     <h4 className="card-header bg-dark text-light p-2">Evaluation</h4>
                     <div className="card-body">
                         <form
-                            className="flex-row justify-center justify-space-between-md align-center"
+                            className="flex-row justify-content-center"
                          onSubmit={submitForm}
                         >
                             
 
-                            <div className='col-12'>
+                            <div className='col-8'>
                                 <label for='title'>Title:</label>
                                 <input 
                                 className='col-12'
@@ -80,7 +80,7 @@ const AddEval = () => {
                                 ></input>
                             </div>
 
-                            <div className='col-12'>
+                            <div className='col-8'>
                                 <label for='agentName'>Agent:</label>
                                 <input 
                                 className='col-12'
@@ -91,7 +91,7 @@ const AddEval = () => {
                                 ></input>
                             </div>
 
-                            <div className='col-12'>
+                            <div className='col-8'>
                                 <label for='author'>QA Name:</label>
                                 <input 
                                 className='col-12'
@@ -102,7 +102,7 @@ const AddEval = () => {
                                 ></input>
                             </div>
 
-                            <div className='col-12'>
+                            <div className='col-8'>
                                 <label for='teamleadName'>Team Lead:</label>
                                 <input 
                                 className='col-12'
@@ -113,22 +113,18 @@ const AddEval = () => {
                                 ></input>
                             </div>
 
-                            <div className='col-12'>
+                            <div className='col-8'>
                                 <label for="empathyAndPassion">Empathy And Passion:</label>
-                                {/* <select id="empathyAndPassion" name="empathyAndPassion">
+                                <select id="empathyAndPassion" name="empathyAndPassion" value={formState.empathyAndPassion}  onChange={handleInputChange}>
+                                    
                                     <option value="" disabled selected hidden></option>
-                                    <option value="true">Yes</option>
-                                    <option value="false">No</option>
-                                </select> */}
-                                <input 
-                                className='col-12'
-                                name='empathyAndPassion'
-                                type='text'
-                                value={formState.empathyAndPassion}
-                                onChange={handleInputChange}
-                                ></input>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                   
+                                </select>
+                                
                             </div>
-                            <div className='col-12'>
+                            <div className='col-8'>
                                 <label for='empathyAndPassionFeedback'>Empathy And Passion Feedback:</label>
                                 <input 
                                 className='col-12'
@@ -136,25 +132,20 @@ const AddEval = () => {
                                 type='text'
                                 value={formState.empathyAndPassionFeedback}
                                 onChange={handleInputChange}
+                                style={{minHeight: "150px"}}
                                 ></input>
                             </div>
 
-                            <div className='col-12'>
+                            <div className='col-8'>
                                 <label for="commitment">Commitment:</label>
-                                {/* <select id="commitment" name="commitment">
+                                <select id="commitment" name="commitment"  value={formState.commitment} onChange={handleInputChange}>
                                     <option value="" disabled selected hidden></option>
-                                    <option value="true">Yes</option>
-                                    <option value="false">No</option>
-                                </select> */}
-                                <input 
-                                className='col-12'
-                                name='commitment'
-                                type='text'
-                                value={formState.commitment}
-                                onChange={handleInputChange}
-                                ></input>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                               
                             </div>
-                            <div className='col-12'>
+                            <div className='col-8'>
                                 <label for='commitmentFeedback'>Commitment Feedback:</label>
                                 <input 
                                 className='col-12'
@@ -165,22 +156,15 @@ const AddEval = () => {
                                 ></input>
                             </div>
 
-                            <div className='col-12'>
+                            <div className='col-8'>
                                 <label for="anticipation">Anticipation:</label>
-                                {/* <select id="anticipation" name="anticipation">
+                                <select id="anticipation" name="anticipation" value={formState.anticipation} onChange={handleInputChange}>
                                     <option value="" disabled selected hidden></option>
-                                    <option value="true">Yes</option>
-                                    <option value="false">No</option>
-                                </select> */}
-                                <input 
-                                className='col-12'
-                                name='anticipation'
-                                type='text'
-                                value={formState.anticipation}
-                                onChange={handleInputChange}
-                                ></input>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
                             </div>
-                            <div className='col-12'>
+                            <div className='col-8'>
                                 <label for='anticipationFeedback'>Anticipation Feedback:</label>
                                 <input 
                                 className='col-12'
@@ -188,25 +172,20 @@ const AddEval = () => {
                                 type='text'
                                 value={formState.anticipationFeedback}
                                 onChange={handleInputChange}
+                                style={{minHeight: "150px"}}
                                 ></input>
                             </div>
 
-                            <div className='col-12'>
+                            <div className='col-8'>
                                 <label for="clarity">Clarity:</label>
-                                {/* <select id="clarity" name="clarity">
+                                <select id="clarity" name="clarity" value={formState.clarity} onChange={handleInputChange}>
                                     <option value="" disabled selected hidden></option>
-                                    <option value="true">Yes</option>
-                                    <option value="false">No</option>
-                                </select> */}
-                                <input 
-                                className='col-12'
-                                name='clarity'
-                                type='text'
-                                value={formState.clarity}
-                                onChange={handleInputChange}
-                                ></input>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                                
                             </div>
-                            <div className='col-12'>
+                            <div className='col-8'>
                                 <label for='clarityFeedback'>Clarity Feedback:</label>
                                 <input 
                                 className='col-12'
@@ -214,61 +193,46 @@ const AddEval = () => {
                                 type='text'
                                 value={formState.clarityFeedback}
                                 onChange={handleInputChange}
+                                style={{minHeight: "150px"}}
                                 ></input>
                             </div>
 
-                            <div className='col-12'>
+                            <div className='col-8'>
                                 <label for="everyCustomerMatters">Every Customer Matters:</label>
-                                {/* <select id="everyCustomerMatters" name="everyCustomerMatters">
+                                <select id="everyCustomerMatters" name="everyCustomerMatters" value={formState.everyCustomerMatters} onChange={handleInputChange}>
                                     <option value="" disabled selected hidden></option>
-                                    <option value="true">Yes</option>
-                                    <option value="false">No</option>
-                                </select> */}
-                                <input 
-                                className='col-12'
-                                name='everyCustomerMatters'
-                                type='text'
-                                value={formState.everyCustomerMatters}
-                                onChange={handleInputChange}
-                                ></input>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                                
                             </div>
-                            <div className='col-12'>
+                            <div className='col-8'>
                                 <label for='everyCustomerMattersFeedback'>Every Customer Matters Feedback:</label>
                                 <input 
                                 className='col-12'
                                 name='everyCustomerMattersFeedback'
                                 type='text'
                                 value={formState.everyCustomerMattersFeedback}
+                                style={{minHeight: "150px"}}
                                 onChange={handleInputChange}
                                 ></input>
                             </div>
 
-                            <div className='col-12'>
+                            <div className='col-8'>
                                 <label for="finalScore">Final Score:</label>
-                                {/* <select id="finalScore" name="finalScore">
+                                <select id="finalScore" name="finalScore" value={formState.finalScore} onChange={handleInputChange}>
                                     <option value="" disabled selected hidden></option>
                                     <option value='0'>0</option>
-                                    <option value='.5'>.5</option>
                                     <option value='1'>1</option>
-                                    <option value='1.5'>1.5</option>
                                     <option value='2'>2</option>
-                                    <option value='2.5'>2.5</option>
                                     <option value='3'>3</option>
-                                    <option value='3.5'>3.5</option>
                                     <option value='4'>4</option>
-                                    <option value='4.5'>4.5</option>
                                     <option value='5'>5</option>
-                                </select> */}
-                                <input 
-                                className='col-12'
-                                name='finalScore'
-                                type='text'
-                                value={formState.finalScore}
-                                onChange={handleInputChange}
-                                ></input>
+                                </select>
+                               
                             </div>
 
-                            <div className="col-12 col-lg-3">
+                            <div className="col-6">
                                 <button className="btn btn-primary btn-block py-3" type="submit">
                                     Submit Evaluation
                                 </button>
