@@ -39,9 +39,9 @@ module.exports = {
         // res.json({ token, user });
     },
 
-    async findAllUsers({ body }, res){
-        const allUser = await User.find();
-        if (!allUser){
+    async allUsers(res){
+        const allUsers = await User.find({});
+        if (!allUsers){
             return res.status(400).json({ message: "can't find all users"});
         }
     },

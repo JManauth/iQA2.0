@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
-import { Form, Button, Alert, Row, Select } from 'react-bootstrap';
-
-
-import { createEval } from '../utils/API';
-import Auth from '../utils/auth';
+import { createEval, allUsers } from '../utils/API';
+// import Auth from '../utils/auth';
 
 const AddEval = () => {
 
@@ -57,6 +53,8 @@ const AddEval = () => {
         }
     };
 
+    
+
     return (
         <main className="flex-row justify-center mb-4">
             <div className="col-4">
@@ -69,8 +67,8 @@ const AddEval = () => {
                         >
                             
 
-                            <div className='col-8'>
-                                <label for='title'>Title:</label>
+                            <div className='col-10'>
+                                <label htmlFor='title'>Title:</label>
                                 <input 
                                 className='col-12'
                                 name='title'
@@ -80,30 +78,8 @@ const AddEval = () => {
                                 ></input>
                             </div>
 
-                            <div className='col-8'>
-                                <label for='agentName'>Agent:</label>
-                                <input 
-                                className='col-12'
-                                name='agentName'
-                                type='text'
-                                value={formState.agentName}
-                                onChange={handleInputChange}
-                                ></input>
-                            </div>
-
-                            <div className='col-8'>
-                                <label for='author'>QA Name:</label>
-                                <input 
-                                className='col-12'
-                                name='author'
-                                type='text'
-                                value={formState.author}
-                                onChange={handleInputChange}
-                                ></input>
-                            </div>
-
-                            <div className='col-8'>
-                                <label for='teamleadName'>Team Lead:</label>
+                            <div className='col-10'>
+                                <label htmlFor='teamleadName'>Team Lead:</label>
                                 <input 
                                 className='col-12'
                                 name='teamleadName'
@@ -113,115 +89,142 @@ const AddEval = () => {
                                 ></input>
                             </div>
 
-                            <div className='col-8'>
-                                <label for="empathyAndPassion">Empathy And Passion:</label>
-                                <select id="empathyAndPassion" name="empathyAndPassion" value={formState.empathyAndPassion}  onChange={handleInputChange}>
+                            <div className='col-10'>
+                                <label htmlFor='agentName'>Agent:</label>
+                                <input 
+                                className='col-12'
+                                name='agentName'
+                                type='text'
+                                value={formState.agentName}
+                                onChange={handleInputChange}
+                                ></input>
+                            </div>
+
+                            <div className='col-10'>
+                                <label htmlFor='author'>QA Name:</label>
+                                <input 
+                                className='col-12'
+                                name='author'
+                                type='text'
+                                value={formState.author}
+                                onChange={handleInputChange}
+                                ></input>
+                            </div>
+
+                            
+
+                            <div className='col-10'>
+                                <label htmlFor="empathyAndPassion">Empathy And Passion:</label>
+                                <select id="empathyAndPassion" name="empathyAndPassion" value={formState.empathyAndPassion}  onChange={handleInputChange} style={{width: "47px"}}>
                                     
-                                    <option value="" disabled selected hidden></option>
+                                    <option value="" disabled defaultValue hidden></option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
                                    
                                 </select>
                                 
                             </div>
-                            <div className='col-8'>
-                                <label for='empathyAndPassionFeedback'>Empathy And Passion Feedback:</label>
-                                <input 
+                            <div className='col-10'>
+                                <label htmlFor='empathyAndPassionFeedback'>Empathy And Passion Feedback:</label>
+                                <textarea 
                                 className='col-12'
                                 name='empathyAndPassionFeedback'
                                 type='text'
                                 value={formState.empathyAndPassionFeedback}
                                 onChange={handleInputChange}
                                 style={{minHeight: "150px"}}
-                                ></input>
+                                >
+                                    
+                                </textarea>
                             </div>
 
-                            <div className='col-8'>
-                                <label for="commitment">Commitment:</label>
-                                <select id="commitment" name="commitment"  value={formState.commitment} onChange={handleInputChange}>
-                                    <option value="" disabled selected hidden></option>
+                            <div className='col-10'>
+                                <label htmlFor="commitment">Commitment:</label>
+                                <select id="commitment" name="commitment"  value={formState.commitment} onChange={handleInputChange} style={{width: "47px"}}>
+                                    <option value="" disabled defaultValue hidden></option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
                                 </select>
                                
                             </div>
-                            <div className='col-8'>
-                                <label for='commitmentFeedback'>Commitment Feedback:</label>
-                                <input 
+                            <div className='col-10'>
+                                <label htmlFor='commitmentFeedback'>Commitment Feedback:</label>
+                                <textarea
                                 className='col-12'
                                 name='commitmentFeedback'
                                 type='text'
                                 value={formState.commitmentFeedback}
                                 onChange={handleInputChange}
-                                ></input>
+                                style={{minHeight: "150px"}}
+                                ></textarea>
                             </div>
 
-                            <div className='col-8'>
-                                <label for="anticipation">Anticipation:</label>
-                                <select id="anticipation" name="anticipation" value={formState.anticipation} onChange={handleInputChange}>
-                                    <option value="" disabled selected hidden></option>
+                            <div className='col-10'>
+                                <label htmlFor="anticipation">Anticipation:</label>
+                                <select id="anticipation" name="anticipation" value={formState.anticipation} onChange={handleInputChange} style={{width: "47px"}}>
+                                    <option value="" disabled defaultValue hidden></option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
                                 </select>
                             </div>
-                            <div className='col-8'>
-                                <label for='anticipationFeedback'>Anticipation Feedback:</label>
-                                <input 
+                            <div className='col-10'>
+                                <label htmlFor='anticipationFeedback'>Anticipation Feedback:</label>
+                                <textarea 
                                 className='col-12'
                                 name='anticipationFeedback'
                                 type='text'
                                 value={formState.anticipationFeedback}
                                 onChange={handleInputChange}
                                 style={{minHeight: "150px"}}
-                                ></input>
+                                ></textarea>
                             </div>
 
-                            <div className='col-8'>
-                                <label for="clarity">Clarity:</label>
-                                <select id="clarity" name="clarity" value={formState.clarity} onChange={handleInputChange}>
-                                    <option value="" disabled selected hidden></option>
+                            <div className='col-10'>
+                                <label htmlFor="clarity">Clarity:</label>
+                                <select id="clarity" name="clarity" value={formState.clarity} onChange={handleInputChange} style={{width: "47px"}}>
+                                    <option value="" disabled defaultValue hidden></option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
                                 </select>
                                 
                             </div>
-                            <div className='col-8'>
-                                <label for='clarityFeedback'>Clarity Feedback:</label>
-                                <input 
+                            <div className='col-10'>
+                                <label htmlFor='clarityFeedback'>Clarity Feedback:</label>
+                                <textarea 
                                 className='col-12'
                                 name='clarityFeedback'
                                 type='text'
                                 value={formState.clarityFeedback}
                                 onChange={handleInputChange}
                                 style={{minHeight: "150px"}}
-                                ></input>
+                                ></textarea>
                             </div>
 
-                            <div className='col-8'>
-                                <label for="everyCustomerMatters">Every Customer Matters:</label>
-                                <select id="everyCustomerMatters" name="everyCustomerMatters" value={formState.everyCustomerMatters} onChange={handleInputChange}>
-                                    <option value="" disabled selected hidden></option>
+                            <div className='col-10'>
+                                <label htmlFor="everyCustomerMatters">Every Customer Matters:</label>
+                                <select id="everyCustomerMatters" name="everyCustomerMatters" value={formState.everyCustomerMatters} onChange={handleInputChange} style={{width: "47px"}}>
+                                    <option value="" disabled defaultValue hidden></option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
                                 </select>
                                 
                             </div>
-                            <div className='col-8'>
-                                <label for='everyCustomerMattersFeedback'>Every Customer Matters Feedback:</label>
-                                <input 
+                            <div className='col-10'>
+                                <label htmlFor='everyCustomerMattersFeedback'>Every Customer Matters Feedback:</label>
+                                <textarea 
                                 className='col-12'
                                 name='everyCustomerMattersFeedback'
                                 type='text'
                                 value={formState.everyCustomerMattersFeedback}
                                 style={{minHeight: "150px"}}
                                 onChange={handleInputChange}
-                                ></input>
+                                ></textarea>
                             </div>
 
-                            <div className='col-8'>
-                                <label for="finalScore">Final Score:</label>
-                                <select id="finalScore" name="finalScore" value={formState.finalScore} onChange={handleInputChange}>
-                                    <option value="" disabled selected hidden></option>
+                            <div className='col-10'>
+                                <label htmlFor="finalScore">Final Score:</label>
+                                <select id="finalScore" name="finalScore" value={formState.finalScore} onChange={handleInputChange} style={{width: "35px"}}>
+                                    <option value="" disabled defaultValue hidden></option>
                                     <option value='0'>0</option>
                                     <option value='1'>1</option>
                                     <option value='2'>2</option>
@@ -238,11 +241,6 @@ const AddEval = () => {
                                 </button>
                             </div>
                         </form>
-
-
-
-
-
                     </div>
                 </div>
             </div>

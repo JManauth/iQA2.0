@@ -16,6 +16,6 @@ router.route('/eval').post(createEval)
 
 router.route('/login').post(login);
 
-// router.route('/allusers').get(allUsers)
+router.route('/allUsers').get(allUsers)
 
 module.exports = router;

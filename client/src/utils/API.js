@@ -29,7 +29,7 @@ export const signIn = (userData) => {
 };
 
 export const allUsers = () => {
-    return fetch('api/users/allusers', {
+    return fetch('api/users/allUsers', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
